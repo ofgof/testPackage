@@ -1,0 +1,7 @@
+{
+    "name": "com.callerid.calleridsdk",
+    "version": "1.0.0",
+    "displayName": "callerIdSDK",
+    "description": "SDK for CallerId",
+    "unity" : "2022.3"
+}

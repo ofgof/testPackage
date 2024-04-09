@@ -1,0 +1,59 @@
+
+-keep,allowobfuscation,allowshrinking class kotlin.coroutines.Continuation
+
+-keepattributes *Annotation*
+
+-keepclasseswithmembers class * {
+  @com.google.gson.annotations.SerializedName <fields>;
+}
+
+-keepclassmembers class * implements android.os.Parcelable {
+  public static final android.os.Parcelable$Creator CREATOR;
+}
+
+-keepclassmembers class * implements java.io.Serializable {
+    static final long serialVersionUID;
+    static final java.io.ObjectStreamField[] serialPersistentFields;
+    private void writeObject(java.io.ObjectOutputStream);
+    private void readObject(java.io.ObjectInputStream);
+    java.lang.Object writeReplace();
+    java.lang.Object readResolve();
+}
+
+-keep class me.sync.admob.** {  *; }
+-keep interface me.sync.admob.** {  *; }
+
+-keep class me.sync.callerid.** {  *; }
+-keep interface me.sync.callerid.** {  *; }
+
+-keep class me.sync.caller_id_sdk.** {  *; }
+-keep interface me.sync.caller_id_sdk.** {  *; }
+
+ -keep,allowobfuscation @com.example.KeepSyntheticConstructorsForTesting class * {
+    synthetic <init>(...);
+  }
+
+
+-keep class com.google.android.gms.games.PlayGames { *; }
+-keep class com.google.android.gms.games.leaderboard.** { *; }
+-keep class com.google.android.gms.games.snapshot.** { *; }
+-keep class com.google.android.gms.games.achievement.** { *; }
+-keep class com.google.android.gms.games.event.** { *; }
+-keep class com.google.android.gms.games.stats.** { *; }
+-keep class com.google.android.gms.games.video.** { *; }
+-keep class com.google.android.gms.games.* { *; }
+-keep class com.google.android.gms.common.api.ResultCallback { *; }
+-keep class com.google.android.gms.signin.** { *; }
+-keep class com.google.android.gms.dynamic.** { *; }
+-keep class com.google.android.gms.dynamite.** { *; }
+-keep class com.google.android.gms.tasks.** { *; }
+-keep class com.google.android.gms.security.** { *; }
+-keep class com.google.android.gms.base.** { *; }
+-keep class com.google.android.gms.actions.** { *; }
+-keep class com.google.games.bridge.** { *; }
+-keep class com.google.android.gms.common.ConnectionResult { *; }
+-keep class com.google.android.gms.common.GooglePlayServicesUtil { *; }
+-keep class com.google.android.gms.common.api.** { *; }
+-keep class com.google.android.gms.common.data.DataBufferUtils { *; }
+-keep class com.google.android.gms.games.quest.** { *; }
+-keep class com.google.android.gms.nearby.** { *; }

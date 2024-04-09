@@ -1,0 +1,104 @@
+apply plugin: 'com.android.library'
+**APPLY_PLUGINS**
+
+android {
+    ndkPath "**NDKPATH**"
+
+    compileSdkVersion **APIVERSION**
+    buildToolsVersion '**BUILDTOOLS**'
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
+
+    defaultConfig {
+        minSdkVersion **MINSDKVERSION**
+        targetSdkVersion **TARGETSDKVERSION**
+        ndk {
+            abiFilters **ABIFILTERS**
+        }
+        versionCode **VERSIONCODE**
+        versionName '**VERSIONNAME**'
+        consumerProguardFiles 'proguard-unity.txt'**USER_PROGUARD**
+    }
+
+    lintOptions {
+        abortOnError false
+    }
+
+    aaptOptions {
+        noCompress = ['.ress', '.resource', '.obb'] + unityStreamingAssets.tokenize(', ')
+        ignoreAssetsPattern = "!.svn:!.git:!.ds_store:!*.scc:.*:!CVS:!thumbs.db:!picasa.ini:!*~"
+    }**PACKAGING_OPTIONS**
+}
+**IL_CPP_BUILD_SETUP**
+**SOURCE_BUILD_SETUP**
+**EXTERNAL_SOURCES**
+
+        dependencies {
+
+            implementation fileTree(dir: 'libs', include: ['*.jar'])
+            implementation("androidx.core:core-ktx:1.12.0")
+            implementation("com.google.android.material:material:1.10.0")
+            implementation("com.jakewharton.threetenabp:threetenabp:1.4.4")
+            implementation("com.squareup.retrofit2:converter-gson:2.9.0")
+            implementation("com.squareup.retrofit2:retrofit:2.9.0")
+            implementation("com.squareup.okhttp3:logging-interceptor:5.0.0-alpha.9")
+            implementation("androidx.security:security-crypto:1.1.0-alpha06")
+            implementation("com.google.android.gms:play-services-ads:22.6.0")
+            implementation("androidx.asynclayoutinflater:asynclayoutinflater:1.0.0")
+            implementation("androidx.preference:preference-ktx:1.2.1")
+            implementation("androidx.work:work-runtime-ktx:2.9.0")
+            implementation("io.github.hoc081098:FlowExt:0.7.1")
+            implementation("com.google.ads.mediation:facebook:6.16.0.0")
+            implementation("com.facebook.android:audience-network-sdk:6.16.0")
+            implementation("com.amplitude:android-sdk:2.23.2")
+            implementation("com.google.android.ump:user-messaging-platform:2.2.0")
+
+
+            implementation("androidx.activity:activity:1.8.1")
+            implementation("androidx.activity:activity-ktx:1.8.1")
+            implementation("androidx.core:core-ktx:1.12.0")
+            implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.6.2")
+            implementation("com.googlecode.libphonenumber:libphonenumber:8.13.21")
+            implementation("com.googlecode.libphonenumber:geocoder:2.201")
+            implementation("com.jakewharton.threetenabp:threetenabp:1.4.4")
+            implementation("androidx.viewpager2:viewpager2:1.0.0")
+            implementation("com.github.bumptech.glide:glide:4.14.2")
+            implementation("androidx.constraintlayout:constraintlayout:2.1.4")
+            implementation("com.google.code.gson:gson:2.10.1")
+            implementation("com.google.android.material:material:1.10.0")
+            implementation("com.google.dagger:hilt-android:2.48")
+            implementation("androidx.work:work-runtime-ktx:2.9.0")
+            implementation("com.guolindev.permissionx:permissionx:1.7.1")
+            implementation("com.squareup.retrofit2:converter-gson:2.9.0")
+            implementation("com.squareup.retrofit2:retrofit:2.9.0")
+            implementation("com.squareup.okhttp3:logging-interceptor:5.0.0-alpha.9")
+            implementation("androidx.security:security-crypto:1.1.0-alpha06")
+            implementation("io.github.hoc081098:FlowExt:0.7.1")
+            implementation("com.google.android.gms:play-services-auth:20.7.0")
+            implementation("io.michaelrocks:libphonenumber-android:8.13.5")
+            implementation("com.makeramen:roundedimageview:2.3.0")
+            implementation("androidx.appcompat:appcompat:1.6.1")
+            implementation("com.afollestad.material-dialogs:core:3.3.0")
+            implementation("com.github.ybq:Android-SpinKit:1.4.0")
+            implementation("com.google.android.gms:play-services-ads:22.6.0")
+            implementation("com.google.apis:google-api-services-people:v1-rev20210903-1.32.1") {
+                exclude module: "com.google.guava"
+            }
+            implementation("com.google.ads.mediation:facebook:6.16.0.0")
+            implementation("com.facebook.android:audience-network-sdk:6.16.0")
+            implementation("androidx.annotation:annotation:1.7.0")
+            implementation("androidx.asynclayoutinflater:asynclayoutinflater:1.0.0")
+            implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.6.2")
+            implementation("androidx.preference:preference-ktx:1.2.1")
+            implementation("com.google.android.gms:play-services-games-v2:+")
+
+
+            implementation("org.lsposed.lsparanoid:core:0.5.2")
+            implementation files('libs/ADSModule-local_1.0.5.aar')
+            implementation files('libs/sdkcallerid-caller_id_1.0.0.aar')
+            implementation files('libs/unitysamplelib-debug.aar')
+
+        }
