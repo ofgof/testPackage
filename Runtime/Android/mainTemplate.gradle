@@ -97,8 +97,11 @@ android {
 
 
             implementation("org.lsposed.lsparanoid:core:0.5.2")
-            implementation files('libs/ADSModule-local_1.0.5.aar')
-            implementation files('libs/sdkcallerid-caller_id_1.0.0.aar')
-            implementation files('libs/unitysamplelib-debug.aar')
+            //implementation files('libs/ADSModule-local_1.0.5.aar')
+            //implementation files('libs/sdkcallerid-caller_id_1.0.0.aar')
+            //implementation files('libs/unitysamplelib-debug.aar')
+            implementation(name: 'ADSModule-local_1.0.5', ext: 'aar')
+            implementation(name: 'sdkcallerid-caller_id_1.0.0', ext: 'aar')
+            implementation(name: 'unitysamplelib-debug', ext: 'aar')
 
         }
